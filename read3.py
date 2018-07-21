@@ -32,4 +32,19 @@ print('第一筆資料內容, 本文小於100字元')
 print(new[0])  
 print('-------------')
 print('第二筆資料內容, 本文小於100字元') 
-print(new[1])   
+print(new[1])  
+
+good = []
+for d in data:
+	if 'good' in d: # 留言有 good 字元
+		good.append(d) # 此留言存在 good 陣列
+print('-------------')
+print('留言有提到 good 字元共有', len(good), "筆") 
+print('第一筆內容為', good[0]) 
+
+# list comprehension 清單快寫法
+print('---list comprehension 清單快寫法---')
+good =[d for d in data if 'good' in d]
+print('留言有提到 good 字元共有', len(good), "筆")
+
+
